@@ -1,0 +1,91 @@
+/*CSS document*/
+
+body {
+    background-color: rgb(255,254,250);
+    color: #402e1e;
+    font-family: Mr Eaves XL, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 1.3em;
+}
+
+div.container {
+    max-width: 40em;
+    margin: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption{
+   font-style: italic;
+    font-size: 1em;
+    line-height: 1.1em;
+   margin: 0.5em 0em 2em;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h1 {
+    background:#402e1e;
+    color: rgb(255,254,250);
+    font-family: freightBig Pro, serif;
+    text-transform: uppercase;
+    padding: 0.5em;
+}
+h2 {
+    font-size: 2em;
+    font-family: freightDisp Pro, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: .7em 0em; 
+}
+h3 {
+    font-size: 1.2em;
+    font-family: freightDisp Pro, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    margin: 1em 0em 0em 0em; 
+}
+
+footer{
+    background:#402e1e;
+    padding: 0.5em;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-bottom: 0.2em;
+    font-family: freightDisp Pro, serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #c19d97;
+}
+
+a {
+    text-decoration: none;
+    color: #402e1e;
+}
+
+p {
+    margin: 0.5em 0em 2em;
+}
