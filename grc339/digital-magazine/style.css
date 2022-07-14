@@ -10,8 +10,13 @@ body {
 }
 
 div.container {
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+section{
     max-width: 40em;
-    margin: auto;
+    margin: 0 auto 3em;
 }
 
 figure {
@@ -28,6 +33,7 @@ figcaption{
 img {
     width: 100%;
     display: block;
+    margin: 1em 0em 1em 0em;
 }
 
 
@@ -37,6 +43,7 @@ ul {
 }
 
 h1 {
+    width: 4em;
     background:#402e1e;
     color: rgb(255,254,250);
     font-family: freightBig Pro, serif;
@@ -51,11 +58,11 @@ h2 {
     margin: .7em 0em; 
 }
 h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: freightDisp Pro, serif;
     text-transform: uppercase;
     letter-spacing: 0.08rem;
-    margin: 1em 0em 0em 0em; 
+    margin: 0em; 
 }
 
 footer{
@@ -64,11 +71,12 @@ footer{
 }
 
 nav ul li {
+    display: inline;
     list-style-type: none;
-    margin-bottom: 0.2em;
+    margin: 0em 0.5em 0.2em 0em;
     font-family: freightDisp Pro, serif;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-transform: uppercase;
     letter-spacing: 0.1rem
 }
@@ -88,4 +96,82 @@ a {
 
 p {
     margin: 0.5em 0em 2em;
+}
+
+@media screen and (min-width: 60em){
+   
+    div.container{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 0 1.5em;
+    }
+    
+    main {
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 0 1.5em;
+    }
+    
+    article{
+        grid-column: 1/4;
+    }
+    
+    
+    section.mainstory {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section.mainstory figure {
+        flex: 1 0 18em;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section.mainstory figure div{
+        flex: 1 0 18em;
+        background-image: url(mainstory.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    section.mainstory figure div img{
+        height: 100%;
+        opacity: 0;
+    }
+    
+    section.mainstory h3 {
+        flex: 0 0 auto;
+        margin: 1em 0em 0.5em 0em;
+        font-size: 1.5em
+    }
+    
+    section.mainstory p {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+    
+    section.secondary {
+        display: flex;
+        flex-direction: column;
+        margin: 0
+    }
+    
+    section.secondary img {
+        height: 65%;
+        margin-top: 0;
+    }
+    
+    aside {
+        grid-column: 2/3;
+        height: 100%;
+    }
+    
+    footer{
+        grid-column: 1/4;
+    }
 }
