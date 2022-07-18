@@ -1,5 +1,4 @@
-/*CSS document*/
-
+/*basics*/
 body {
     background-color: rgb(255,254,250);
     color: #402e1e;
@@ -14,62 +13,7 @@ div.container {
     margin: 0 auto;
 }
 
-section{
-    max-width: 40em;
-    margin: 0 auto 3em;
-}
-
-figure {
-    margin: 0;
-}
-
-figcaption{
-   font-style: italic;
-    font-size: 1em;
-    line-height: 1.1em;
-   margin: 0.5em 0em 2em;
-}
-
-img {
-    width: 100%;
-    display: block;
-    margin: 1em 0em 1em 0em;
-}
-
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-h1 {
-    width: 4em;
-    background:#402e1e;
-    color: rgb(255,254,250);
-    font-family: freightBig Pro, serif;
-    text-transform: uppercase;
-    padding: 0.5em;
-}
-h2 {
-    font-size: 2em;
-    font-family: freightDisp Pro, serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    margin: .7em 0em; 
-}
-h3 {
-    font-size: 1em;
-    font-family: freightDisp Pro, serif;
-    text-transform: uppercase;
-    letter-spacing: 0.08rem;
-    margin: 0em; 
-}
-
-footer{
-    background:#402e1e;
-    padding: 0.5em;
-}
-
+/*navigation*/
 nav ul li {
     display: inline;
     list-style-type: none;
@@ -89,89 +33,241 @@ nav ul li a:hover{
     color: #c19d97;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     color: #402e1e;
 }
 
-p {
-    margin: 0.5em 0em 2em;
+
+/*images*/
+img {
+    width: 100%;
+    display: block;
+    margin: 0em 0em 1em 0em;
 }
 
+figure {
+    margin: 0;
+}
+
+figcaption{
+   font-style: italic;
+    font-size: 1em;
+    line-height: 1.1em;
+   margin: 0.5em 0em 2em;
+}
+
+
+/*text heirarchy*/
+h1 {
+    width: 4em;
+    background:#402e1e;
+    color: rgb(255,254,250);
+    font-family: freightBig Pro, serif;
+    text-transform: uppercase;
+    padding: 1em 0.5em 0.1em;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: freightDisp Pro, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    line-height: 1.1em;
+    margin: .7em 0em; 
+}
+
+h3 {
+    font-size: 1.2em;
+    font-family: freightDisp Pro, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    margin: 0; 
+}
+
+h4 {
+    font-family: Mr Eaves XL, sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0.5rem 0 0 0;
+}
+
+p {
+    margin: 0.5rem 0 2rem;
+    max-width: 35em;
+}
+
+
+
+/*newsletter page*/
+p.description {
+        margin: 0.5rem 1rem;     
+    }
+
+section.personal-info, section.options{
+    background-color: #e8ede9;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    max-width: 40em;
+}
+
+section.personal-info ul li{
+    margin: 0.5rem 1rem 1rem;   
+}
+
+
+section.options input{
+    margin: 0em 1em 1.5em;
+}
+
+button {
+    background-color: #e8ede9;
+    font-family: Mr Eaves XL, sans-serif;
+    color: #402e1e;
+}
+
+main.newsletter h2 {
+   margin-top: 1.5em;
+}
+
+
+/*media queary for responsive webpages*/
 @media screen and (min-width: 60em){
-   
-    div.container{
+    
+div.container{
         display: grid;
         grid-template-columns: 3fr 1fr;
         grid-gap: 0 1.5em;
     }
     
-    main {
+main {
         grid-column: 1/2;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap: 0 1.5em;
     }
     
-    article{
-        grid-column: 1/4;
-    }
-    
-    
-    section.mainstory {
-        grid-column: 2/4;
-        grid-row: 1/3;
+section.secondary {
         display: flex;
         flex-direction: column;
-    }
-    
-    section.mainstory figure {
-        flex: 1 0 18em;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    section.mainstory figure div{
-        flex: 1 0 18em;
-        background-image: url(mainstory.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    section.mainstory figure div img{
-        height: 100%;
-        opacity: 0;
-    }
-    
-    section.mainstory h3 {
-        flex: 0 0 auto;
-        margin: 1em 0em 0.5em 0em;
-        font-size: 1.5em
-    }
-    
-    section.mainstory p {
-        flex: 0 0 auto;
         margin: 0;
     }
     
-    section.secondary {
-        display: flex;
-        flex-direction: column;
-        margin: 0
-    }
-    
-    section.secondary img {
-        height: 65%;
+section.secondary img {
         margin-top: 0;
     }
     
-    aside {
+aside {
         grid-column: 2/3;
         height: 100%;
     }
-    
-    footer{
+        
+footer{
+        background-color: #402e1e;
         grid-column: 1/4;
-    }
+    } 
+    
+    
+/*homepage*/
+section.mainstory {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
 }
+    
+section.mainstory figure {
+    flex: 1 0 18em;
+    display: flex;
+    flex-direction: column;
+}
+    
+section.mainstory figure div{
+    flex: 1 0 18em;
+    background-image: url(mainstory.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    
+section.mainstory figure div img{
+    height: 100%;
+    opacity: 0;
+}
+    
+section.mainstory h3 {
+    flex: 0 0 auto;
+    margin: 1em 0em 0.5em 0em;
+    font-size: 1.5em
+}
+    
+section.mainstory p {
+    flex: 0 0 auto;
+    margin: 0 0 1em;
+} 
+
+    
+    
+/*mainstory*/
+article{
+    grid-column: 1/4;
+}
+  
+    
+    
+/*photogallery*/
+div.photogallery{
+        background-color: rgb(255,254,250);
+        max-width: 80em;
+        margin: 0 auto;
+        padding: 1.5em;
+    }
+    
+    main.photogallery {
+        position: relative;
+        padding-bottom: calc(130% + 5em);
+        overflow: hidden;
+    }
+    
+    main.photogallery figure {
+        width: calc(100%-2em);
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    main.photogallery img {
+        width: 100%;
+    }
+    
+input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+input:nth-of-type(3):checked ~ main figure:nth-of-type(3),
+input:nth-of-type(4):checked ~ main figure:nth-of-type(4),
+input:nth-of-type(5):checked ~ main figure:nth-of-type(5),
+input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
+input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
+input:nth-of-type(8):checked ~ main figure:nth-of-type(8){
+    opacity: 1;
+    }
+
+nav.photogallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 0.2em;
+}
+    
+    
+/*newsletter page*/
+main.newsletter h2 {
+   margin-top: 0;
+}
+}   
