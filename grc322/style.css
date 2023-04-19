@@ -1,0 +1,52 @@
+/*CSS DOCUMENT */
+
+
+body {
+	background-color: #fafafa;
+	color: #333333;
+	font-family: freightDisp Pro, serif;
+}
+
+div.container {
+	max-width: 40em;
+	margin: auto;
+}
+
+img {
+	width: 100%;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+figcaption {
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, p, ul, ol, li, figcaption {
+	margin: 0; 
+	padding:.5rem; 
+	font-size: 1em; 
+	font-weight: normal;
+}
+
+h3 {
+    color: cornflowerblue;
+}
+
+h1 {
+	font-size: 4em; 
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.5em; 
+	font-weight: bold;
+}
